@@ -8,6 +8,7 @@ class ApiScreencastsTest < ActionDispatch::IntegrationTest
     screencasts = JSON.parse(response.body)
     assert screencasts.size == 3 # because there are three fixtures (see screencasts.yml)
     assert screencasts.any? { |s| s["title"] == screencasts(:fast_rails_commands).title }
+    Response#chunked = true
   end
 
   test "get /api/screencasts/:id" do
@@ -16,5 +17,6 @@ class ApiScreencastsTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert body == screencast.to_json
     assert JSON.parse(response.body)["title"] == screencast.title
+    Response#chunked = true
   end
 end
