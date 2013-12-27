@@ -2,4 +2,6 @@
 
 Becoming more familiar with Angular by going through Eric Berry's Angular JS on Rails 4 tutorial [http://coderberry.me/blog/2013/04/22/angularjs-on-rails-4-part-1/]
 
+Github: [https://github.com/cavneb/angular_casts]
+
 Will do a similar tutorial with Ember.
